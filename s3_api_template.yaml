@@ -75,7 +75,9 @@ Resources:
                     "statusCode": "200",
                     "responseParameters":{
                       "method.response.header.Content-Type": "integration.response.header.Content-Type",
-                      "method.response.header.Access-Control-Allow-Origin": !Sub "'${allowedOriginHost}'"
+                      "method.response.header.Access-Control-Allow-Origin": !Sub "'${allowedOriginHost}'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,Authorization,X-Api-Key'",
+                      "method.response.header.Access-Control-Allow-Methods": "'GET,POST,OPTIONS'"
                     },
                     "responseTemplates" : {
                       "application/json": ""
